@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".AnalyzeActivity">
+
+    <FrameLayout
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pagename"
+            android:layout_width="@dimen/TitleW"
+            android:layout_height="@dimen/TitleH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/murucmuruc"
+            android:text="유사도 분석"
+            android:textSize="40sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/dataview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Title"
+        android:orientation="horizontal"
+        android:background="@color/colorPink">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="분석 결과 : "
+            android:textSize="30dp"
+            android:fontFamily="@font/whitecat"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="data"
+            android:textSize="30dp"
+            android:fontFamily="@font/whitecat" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dataview"
+        android:layout_above="@id/navigationBar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/original_top"
+                        android:layout_width="@dimen/imagewidth"
+                        android:layout_height="@dimen/imageheight" />
+                    <ImageView
+                        android:id="@+id/alg_top"
+                        android:layout_width="@dimen/imagewidth"
+                        android:layout_height="@dimen/imageheight"
+                        android:src="#66aa66" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/original_left"
+                        android:layout_width="@dimen/imagewidth"
+                        android:layout_height="@dimen/imageheight" />
+                    <ImageView
+                        android:id="@+id/alg_left"
+                        android:layout_width="@dimen/imagewidth"
+                        android:layout_height="@dimen/imageheight"
+                        android:src="#ccaa66" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/homebtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_home"
+                android:background="@color/navigation_bar" />
+
+            <ImageButton
+                android:id="@+id/camerabtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_camera"
+                android:background="@color/navigation_click"/>
+
+            <ImageButton
+                android:id="@+id/healthbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_health"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/finderbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_finder"
+                android:background="@color/navigation_bar" />
+
+            <ImageButton
+                android:id="@+id/settingbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_setting"
+                android:background="@color/navigation_bar" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

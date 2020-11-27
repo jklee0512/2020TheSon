@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/murucmuruc"
+                    android:text="@string/msg1"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/i1"
+                    android:layout_width="@dimen/imagewidth"
+                    android:layout_height="@dimen/imageheight"
+                    android:layout_below="@id/t1"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    app:srcCompat="@drawable/msg1" />
+
+                <TextView
+                    android:id="@+id/msg1t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t1"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i1"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t1msg1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/msg1t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg1t1"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i1"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t1msg2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/msg1t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg1t2"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i1"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t1msg3"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/murucmuruc"
+                    android:text="@string/msg2"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/i2"
+                    android:layout_width="@dimen/imagewidth"
+                    android:layout_height="@dimen/imageheight"
+                    android:layout_below="@id/t2"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    app:srcCompat="@drawable/msg2" />
+
+                <TextView
+                    android:id="@+id/msg2t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t2"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i2"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t2msg1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/msg2t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg2t1"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i2"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t2msg2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/msg2t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg2t2"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i2"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t2msg3"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/murucmuruc"
+                    android:text="@string/msg3"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/i3"
+                    android:layout_width="@dimen/imagewidth"
+                    android:layout_height="@dimen/imageheight"
+                    android:layout_below="@id/t3"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    app:srcCompat="@drawable/msg3" />
+
+                <TextView
+                    android:id="@+id/msg3t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t3"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i3"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t3msg1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/msg3t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg3t1"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i3"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t3msg2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/msg3t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/msg3t2"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/i3"
+                    android:fontFamily="@font/whitecat"
+                    android:text="@string/t3msg3"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

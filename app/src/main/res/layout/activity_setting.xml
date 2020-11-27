@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/settingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigationBar"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/main_background">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="@dimen/TitleW"
+                android:layout_height="@dimen/TitleH"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/murucmuruc"
+                android:text="설정"
+                android:textSize="40sp" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/settinglist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_small"
+            android:padding="@dimen/margin_medium"
+            android:background="@drawable/layout_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alramsetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/whitecat"
+                android:text="알림설정"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/switchT1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/whitecat"
+                    android:text="알림설정"
+                    android:textSize="30sp" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_margin="@dimen/margin_small" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/alramkind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="@color/whiteTransparent"
+                    android:fontFamily="@font/whitecat"
+                    android:text="알림종류 설정"
+                    android:textAlignment="textStart"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/nextAct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:background="@color/whiteTransparent"
+                    app:srcCompat="@drawable/clickable" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/switchT2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/whitecat"
+                    android:text="무음설정"
+                    android:textSize="30sp" />
+
+                <Switch
+                    android:id="@+id/switch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_margin="@dimen/margin_small" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/whitecat"
+                android:text="문의사항"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/whitecat"
+                android:text="제작자들"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/whitecat"
+                android:text="도움말"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/homebtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                android:background="@color/navigation_bar"
+                app:srcCompat="@drawable/ic_home" />
+
+            <ImageButton
+                android:id="@+id/camerabtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                android:background="@color/navigation_bar"
+                app:srcCompat="@drawable/ic_camera" />
+
+            <ImageButton
+                android:id="@+id/healthbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                android:background="@color/navigation_bar"
+                app:srcCompat="@drawable/ic_health" />
+
+            <ImageButton
+                android:id="@+id/finderbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                android:background="@color/navigation_bar"
+                app:srcCompat="@drawable/ic_finder" />
+
+            <ImageButton
+                android:id="@+id/settingbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                android:background="@color/navigation_click"
+                app:srcCompat="@drawable/ic_setting" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

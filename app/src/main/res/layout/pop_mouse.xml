@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/informationtab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/find_mouse"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="20dp"
+            android:maxLines="2"
+            android:text="@string/mouse_input"
+            android:textSize="30sp"
+            android:fontFamily="@font/whitecat"/>
+
+        <EditText
+            android:id="@+id/edit_mouse"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="간략하게"
+            android:textSize="30sp"
+            android:fontFamily="@font/whitecat"/>
+
+        <Button
+            android:id="@+id/findbtn"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/circlebutton"
+            android:text="@string/search"
+            android:textSize="20sp"
+            android:fontFamily="@font/whitecat"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mousetab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mname"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/murucmuruc"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mwidth"
+            android:textSize="20sp"
+            android:fontFamily="@font/murucmuruc"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mheight"
+            android:textSize="20sp"
+            android:fontFamily="@font/murucmuruc"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/findmouse_list"
+        android:layout_width="wrap_content"
+        android:layout_height="262dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/mousetab" />
+
+    <Button
+        android:id="@+id/returnbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="20dp"
+        android:text="확인"
+        android:textSize="30sp"
+        android:fontFamily="@fonts/whitecat"
+        android:background="@drawable/roundbutton"/>
+
+</LinearLayout>

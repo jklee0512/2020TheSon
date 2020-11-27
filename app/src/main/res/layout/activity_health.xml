@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main_background">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/TitleW"
+            android:layout_height="@dimen/TitleH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:text="운동 추천"
+            android:textSize="40sp"
+            android:fontFamily="@font/murucmuruc"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_below="@+id/Title">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="손가락 운동"
+            android:textSize="20sp"
+            android:textColor="@color/colorOrange"
+            android:background="@color/colorPink"
+            android:fontFamily="@font/whitecat"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="혈자리 마사지"
+            android:textSize="20sp"
+            android:textColor="@color/colorOrange"
+            android:background="@color/colorPink"
+            android:fontFamily="@font/whitecat"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="손바닥 운동"
+            android:textSize="20sp"
+            android:textColor="@color/colorOrange"
+            android:background="@color/colorPink"
+            android:fontFamily="@font/whitecat"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_below="@+id/tabbtn"
+        android:layout_above="@+id/navigationBar">
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/homebtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_home"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/camerabtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_camera"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/healthbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_health"
+                android:background="@color/navigation_click"/>
+
+            <ImageButton
+                android:id="@+id/finderbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_finder"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/settingbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_setting"
+                android:background="@color/navigation_bar"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

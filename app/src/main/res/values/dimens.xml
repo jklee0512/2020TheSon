@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="botoomBar_menu">60dp</dimen>
+    <dimen name="imagewidth">200dp</dimen>
+    <dimen name="imageheight">300dp</dimen>
+    <dimen name="mouseVW">100dp</dimen>
+    <dimen name="mouseVH">100dp</dimen>
+    <dimen name="TitleW">250dp</dimen>
+    <dimen name="TitleH">60dp</dimen>
+</resources>

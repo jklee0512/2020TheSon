@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">The Son</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="mouse_input">기기를\n입력하세요</string>
+    <string name="camera1_name">정면에서 찍어주세요</string>
+    <string name="camera2_name">측면에서 찍어주세요</string>
+    <string name="analyze">분석</string>
+    <string name="mname">이름</string>
+    <string name="mwidth">가로</string>
+    <string name="mheight">세로</string>
+    <string name="search">검색</string>
+    <string name="health1">1. 손을 들어 엄지손가락이 바깥쪽으로 나오게 주먹을 쥔다</string>
+    <string name="health2">2. 손가락은 펴고 엄지는 손 옆에 붙인다</string>
+    <string name="health3">3. 손가락을 편채로 손목 관절을 편다</string>
+    <string name="health4">4. 3번의 상태에서 엄지를 쭉편다</string>
+    <string name="health5">5. 엄지손가락을 펴고, 손목 관절을 편 상태를 유지한다</string>
+    <string name="health6">6. 반대쪽 엄지손가락과 다른 손가락으로 엄지를 잡고 밑으로 당긴다</string>
+    <string name="health_info">10~15회 반복하며 주 6~7일, 3~4주간 실시한다</string>
+    <string name="msg1"> - 손바닥에 통증이 심한 경우 내관을 부드럽게 지압한다.</string>
+    <string name="msg2"> - 손가락의 통증 및 굴곡 신전 운동이 안되는 경우 외관을 부드럽게 지압한다.</string>
+    <string name="msg3"> - 양손에 마비감이 있는 경우 팔사, 합곡 등을 부드럽게 지압한다.</string>
+    <string name="t1msg1"> 혈자리 : 내관</string>
+    <string name="t2msg1"> 혈자리 : 외관</string>
+    <string name="t3msg1"> 혈자리 : 합곡, 팔사</string>
+    <string name="t1msg2"> 위치 : 손목 주름의 중앙에서 팔꿈치 쪽으로 손가락 세 개 너비</string>
+    <string name="t2msg2"> 위치 : 손등 중앙에서 팔꿈치쪽으로 1/6 지점</string>
+    <string name="t3msg2"> 위치 : 손가락 마디 사이사이와 엄지와 검지 사이가 만나는 곳에 위치한다.</string>
+    <string name="t1msg3"> 지압법 : 반대쪽 엄지손가락으로 가볍게 쥐고 1회 5~6번 증상이 심화되지 않을 정도로 가볍게 눌러준다. 1일 3~4회 반복한다.</string>
+    <string name="t2msg3"> 지압법 : 반대쪽 손으로 주먹을 쥐듯이 가볍게 쥐고 1회 3~4번 살짝 눌러주며, 1일 3~4회 시행한다. 증상이 심화되면 시행하지 않도록 한다.</string>
+    <string name="t3msg3"> 지압법 : 집게를 쥐듯이 1회 3~4번 눌러준다.</string>
+    <string name="palm1"> 손가락 및 손목, 팔꿈치 굴곡근을 늘려 근육의 피로를 풀어주어 혈액순환에 도움을 준다. </string>
+    <string name="palm2"> ① 손을 앞으로 쭊 뻗어 손바닥이 정면을 향하게 한다.</string>
+    <string name="palm3"> ② 손목을 꺽어 다른 손으로 손끝을 잡아 몸 쪽으로 당긴다.</string>
+    <string name="palm4"> ③ 양 손을 바꿔가며 2~3회 뒤풀이한다.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

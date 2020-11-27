@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".GridActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main_background">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/TitleW"
+            android:layout_height="@dimen/TitleH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:text="손모형 설정"
+            android:textSize="40sp"
+            android:fontFamily="@font/murucmuruc"/>
+
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/handtable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/Title">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="손크기"
+                android:textSize="40sp"
+                android:fontFamily="@font/whitecat"/>
+
+            <ImageButton
+                android:id="@+id/handhelp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/colorWhite"
+                app:srcCompat="@drawable/ic_questionmark" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="손가로길이"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="           cm"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="손세로길이"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="           cm"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/mousetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/handtable">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="마우스크기"
+                android:textSize="40sp"
+                android:fontFamily="@font/whitecat" />
+
+            <Button
+                android:id="@+id/mousefind"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/roundbutton"
+                android:text="기종찾기"
+                android:textSize="20sp"
+                android:fontFamily="@font/whitecat" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="가로길이"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="           cm"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="세로길이"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="           cm"
+                android:textSize="30sp"
+                android:fontFamily="@font/whitecat"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/okbtn"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/mousetable"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundbutton"
+        android:text="손모형 설정"
+        android:textSize="30sp"
+        android:fontFamily="@font/whitecat"/>
+
+    <TableLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/homebtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_home"
+                android:background="@color/navigation_click"/>
+
+            <ImageButton
+                android:id="@+id/camerabtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_camera"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/healthbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_health"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/finderbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_finder"
+                android:background="@color/navigation_bar"/>
+
+            <ImageButton
+                android:id="@+id/settingbtn"
+                android:layout_width="@dimen/botoomBar_menu"
+                android:layout_height="@dimen/botoomBar_menu"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_setting"
+                android:background="@color/navigation_bar"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
