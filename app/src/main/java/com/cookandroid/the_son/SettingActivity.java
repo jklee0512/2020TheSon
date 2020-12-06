@@ -1,7 +1,10 @@
 package com.cookandroid.the_son;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Build;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +18,9 @@ public class SettingActivity extends AppCompatActivity {
     private Switch alramonoff, soundonoff, C1, C2, S1, S2;
     private ImageButton homeBtn, cameraBtn, healthBtn, finderBtn, settingBtn;
     ImageButton.OnClickListener imgbuttonListener;
+
+    private AlramService mService;
+    private boolean mBound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +96,6 @@ public class SettingActivity extends AppCompatActivity {
             */
         }
     }
-
     //알람이 올때 소리를 낼지 안낼지
     public void SoundFunc(View view) {
         if(soundonoff.isChecked()) {
@@ -100,7 +105,6 @@ public class SettingActivity extends AppCompatActivity {
             alram.setSoundOnOff(0);
         }
     }
-
     //자세교정 아침,점심,저녁
     public void CBLDFunc(View view) {
         if(C1.isChecked())
@@ -115,13 +119,11 @@ public class SettingActivity extends AppCompatActivity {
         else
             alram.setWorkcorrect(0);
     }
-
     //자세교정 시간대 설정
     public void CsetTimeFunc(View view) {
         Intent intent1 = new Intent(SettingActivity.this, Setting_alram1.class );
         startActivity(intent1);
     }
-
     //스트레칭 아침,점심,저녁
     public void SBLDFunc(View view) {
         if(S1.isChecked())
@@ -129,7 +131,6 @@ public class SettingActivity extends AppCompatActivity {
         else
             alram.setBLDstretching(0);
     }
-
     //스트레칭 설정시간대
     public void SworkFunc(View view) {
         if(S2.isChecked())
@@ -137,10 +138,41 @@ public class SettingActivity extends AppCompatActivity {
         else
             alram.setWorkstretching(0);
     }
-
     //스트레칭 시간대 설정
     public void SsetTimeFunc(View view) {
         Intent intent2 = new Intent(SettingActivity.this, Setting_alram2.class );
         startActivity(intent2);
+    }
+
+    private ServiceConnection mConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            // MyBinder와 연결될 것이며 IBinder 타입으로 넘어오는 것을 캐스팅하여 사용
+            AlramService.MyBinder binder = (AlramService.MyBinder) service;
+            mService = binder.getService();
+            mBound = true;
+        }
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            // 예기치 않은 종료
+        }
+    };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // 서비스와 연결
+        Intent intent = new Intent(this, AlramService.class);
+        bindService(intent, mConnection, BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // 서비스와 연결 해제
+        if (mBound) {
+            unbindService(mConnection);
+            mBound = false;
+        }
     }
 }
