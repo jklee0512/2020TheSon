@@ -85,15 +85,15 @@ public class SettingActivity extends AppCompatActivity {
         }
         else {
             alram.setAlramOnOff(0);
-            /*
+
             Intent intent = new Intent(SettingActivity.this, AlramService.class);
-            intent.setAction("startForeground");
+            intent.setAction("stopForeground");
             if(Build.VERSION.SDK_INT> Build.VERSION_CODES.O) {
-                //stopForegroundService(intent);
+                startForegroundService(intent);
             } else {
                 stopService(intent);
             }
-            */
+
         }
     }
     //알람이 올때 소리를 낼지 안낼지

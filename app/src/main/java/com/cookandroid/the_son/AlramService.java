@@ -25,8 +25,11 @@ public class AlramService extends Service {
         if ("startForeground".equals(intent.getAction())) {
             // 포그라운드 서비스 시작
             startForegroundService();
-
-        } else if (mThread == null) {
+        }
+        else if ("stopForeground".equals(intent.getAction())){
+             stopForeground(true);
+        }
+        else if (mThread == null) {
             // 스레드 초기화 및 시작
             mThread = new Thread("My Thread") {
                 @Override
