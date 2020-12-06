@@ -69,8 +69,12 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:13:5-67
 	android:name
 		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:13:22-64
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:14:22-74
 application
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:15:5-53:19
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:16:5-53:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\137eb4bab4fd2d4373937b9cb97986b5\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\137eb4bab4fd2d4373937b9cb97986b5\AndroidManifest.xml:9:5-20
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\b03f8bb8f976dd125f6e950854ad46fc\AndroidManifest.xml:22:5-28:19
@@ -78,25 +82,25 @@ MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\CookAndroid\.gradle\cac
 MERGED from [com.android.volley:volley:1.1.0] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\8483ae977b6bde6fab30636177d3f791\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.0] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\8483ae977b6bde6fab30636177d3f791\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:19:9-41
 	android:roundIcon
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:17:9-38
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:18:9-38
 	android:allowBackup
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:21:9-45
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:22:9-45
 service#com.cookandroid.the_son.AlramService
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:23:9-27:19
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:24:9-27:19
 	android:enabled
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:24:13-35
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:25:13-35
 	android:exported
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:25:13-36
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:23:18-46
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:24:18-46
 activity#com.cookandroid.the_son.Activity_Loading
 ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:29:9-35:20
 	android:name
