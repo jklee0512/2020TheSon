@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/main_background">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/TitleW"
+            android:layout_height="@dimen/TitleH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/murucmuruc"
+            android:text="마우스 추천"
+            android:textSize="40sp" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Title"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/findDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:fontFamily="@font/whitecat"
+            android:text="상세검색"
+            android:textSize="30sp" />
+
+
+
+        <Button
+            android:id="@+id/okbtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@drawable/roundbutton"
+            android:fontFamily="@font/whitecat"
+            android:text="검색"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/checker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailBar"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회사명" />
+
+            <CheckBox
+                android:id="@+id/galaxy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="갤럭시" />
+
+            <CheckBox
+                android:id="@+id/leopold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="레오폴드" />
+
+            <CheckBox
+                android:id="@+id/samsung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삼성전자" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/zenix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제닉스" />
+
+            <CheckBox
+                android:id="@+id/hansung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한성" />
+
+            <CheckBox
+                android:id="@+id/abko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABKO" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/apple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APPLE" />
+
+            <CheckBox
+                android:id="@+id/asus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASUS" />
+
+            <CheckBox
+                android:id="@+id/cherry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHERRY" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/cox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COX" />
+
+            <CheckBox
+                android:id="@+id/cosair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COSAIR" />
+
+            <CheckBox
+                android:id="@+id/dell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELL" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/gigabyte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GIGABYTE" />
+
+            <CheckBox
+                android:id="@+id/gskill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G.SKILL" />
+
+            <CheckBox
+                android:id="@+id/hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/lg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LG" />
+
+            <CheckBox
+                android:id="@+id/logitech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGITECH" />
+
+            <CheckBox
+                android:id="@+id/maxtill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAXTILL" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tab7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/msi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MSI" />
+
+            <CheckBox
+                android:id="@+id/razer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RAZER" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id/tab8"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/whitecat"
+                android:text="연결방식"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/wire1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="유선" />
+
+            <CheckBox
+                android:id="@+id/wire2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="무선" />
+
+            <CheckBox
+                android:id="@+id/wire3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="유선+무선" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tab9"
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/whitecat"
+                android:text="무게"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/weight1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="~90g" />
+
+            <CheckBox
+                android:id="@+id/weight2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="91~110g" />
+
+            <CheckBox
+                android:id="@+id/weight3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="121g~" />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
