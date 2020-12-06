@@ -7,10 +7,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TableLayout;
@@ -28,14 +26,10 @@ import java.util.ArrayList;
 
 public class MouseActivity extends AppCompatActivity {
 
-    public Button btnOK, btnHide;
+    private Button tagBtn, refresh;
     private ImageButton homeBtn, cameraBtn, healthBtn, finderBtn, settingBtn;
     ImageButton.OnClickListener imgbuttonListener;
-    private CheckBox wire1Btn, wire2Btn, wire3Btn, weight1Btn, weight2Btn, weight3Btn;
-    ListView listView;
-
-    private TableLayout OptionList;
-    int check = 0;
+    private ListView listView;
     boolean isTrue = false;
 
     private ArrayList<search_item> mylist = new ArrayList<>();  //원본 리스트
@@ -53,6 +47,7 @@ public class MouseActivity extends AppCompatActivity {
     private static final String Tag_picture = "mouse_picture";  //사진
     private static final String Tag_site = "mouse_site";        //상세내용 페이지
     private String url = "http://121.190.18.135/mouse_suggest.php";
+    private int[] cbtcheck;
 
     private Handler handler1 = new Handler();
     private Runnable runnable1 = new Runnable() {
@@ -89,15 +84,8 @@ public class MouseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mouse);
 
-        OptionList = findViewById(R.id.checker);
-        wire1Btn = findViewById(R.id.wire1);
-        wire2Btn = findViewById(R.id.wire2);
-        wire3Btn = findViewById(R.id.wire3);
-        weight1Btn = findViewById(R.id.weight1);
-        weight2Btn = findViewById(R.id.weight2);
-        weight3Btn = findViewById(R.id.weight3);
-        btnOK = findViewById(R.id.okbtn);
-        btnHide = findViewById(R.id.hide);
+        tagBtn = findViewById(R.id.tagbtn);
+        refresh = findViewById(R.id.refresh);
         homeBtn = findViewById(R.id.homebtn);
         cameraBtn = findViewById(R.id.camerabtn);
         healthBtn = findViewById(R.id.healthbtn);
@@ -115,13 +103,19 @@ public class MouseActivity extends AppCompatActivity {
                 }
             }
         }).start();
-        handler.post(runnable);
+        handler1.post(runnable);
 
-        //상세조건 검색
-        btnOK.setOnClickListener(new View.OnClickListener() {
+        tagBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MouseActivity.this, mousetag.class);
+                startActivityForResult(intent,1);
+            }
+        });
+
+        refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //시작하자마자 모든 마우스가 잇는 리스트 출력하고 상세조건 검색으로 변형할것
                 (new Thread() {
                     public void run() {
                         adapter.clear();
@@ -138,25 +132,7 @@ public class MouseActivity extends AppCompatActivity {
                 Toast.makeText(MouseActivity.this, "검색완료", Toast.LENGTH_SHORT).show();
             }
         });
-        btnHide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(check==0) {
-                    OptionList.setVisibility(View.INVISIBLE);
-                    //OptionList.findViewById(R.id.checker);
-                    btnHide.setText("펼치기");
-                    check = 1;
-                    Toast.makeText(MouseActivity.this, "펼치기", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    OptionList.setVisibility(View.VISIBLE);
-                    //OptionList.findViewById(R.id.checker2);
-                    btnHide.setText("접기");
-                    check = 0;
-                    Toast.makeText(MouseActivity.this, "접기", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -171,29 +147,28 @@ public class MouseActivity extends AppCompatActivity {
             public void onClick(View view) {
                 switch (view.getId()) {
                     case R.id.homebtn:
-                        Intent intent4 = new Intent(MouseActivity.this,GridActivity.class);
+                        Intent intent4 = new Intent(MouseActivity.this, GridActivity.class);
                         startActivity(intent4);
                         finish();
                         break;
                     case R.id.camerabtn:
-                        Intent intent5 = new Intent(MouseActivity.this,Camera1Activity.class);
+                        Intent intent5 = new Intent(MouseActivity.this, Camera1Activity.class);
                         startActivity(intent5);
                         finish();
                         break;
                     case R.id.healthbtn:
-                        Intent intent6 = new Intent(MouseActivity.this,HealthActivity.class);
+                        Intent intent6 = new Intent(MouseActivity.this, HealthActivity.class);
                         startActivity(intent6);
                         finish();
                         break;
                     case R.id.settingbtn:
-                        Intent intent8 = new Intent(MouseActivity.this,SettingActivity.class);
+                        Intent intent8 = new Intent(MouseActivity.this, SettingActivity.class);
                         startActivity(intent8);
                         finish();
                         break;
                 }
             }
         };
-
         homeBtn.setOnClickListener(imgbuttonListener);
         cameraBtn.setOnClickListener(imgbuttonListener);
         healthBtn.setOnClickListener(imgbuttonListener);
@@ -201,22 +176,30 @@ public class MouseActivity extends AppCompatActivity {
         settingBtn.setOnClickListener(imgbuttonListener);
     }
 
-    public int[] cbtCheck(){
-        int arr[] = new int[6];
-        if(wire1Btn.isChecked()) arr[0] = 1;
-        if(wire2Btn.isChecked()) arr[1] = 1;
-        if(wire3Btn.isChecked()) arr[2] = 1;
-        if(weight1Btn.isChecked()) arr[3] = 1;
-        if(weight2Btn.isChecked()) arr[4] = 1;
-        if(weight3Btn.isChecked()) arr[5] = 1;
-
-        return arr;
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==1){
+            cbtcheck=data.getIntArrayExtra("array");
+            (new Thread() {
+                public void run() {
+                    adapter.clear();
+                    selectlist.addAll(mylist);
+                    isTrue=false;
+                    try {
+                        checkUpdate();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+            handler.post(runnable);
+        }
     }
 
     public void checkUpdate(){
-        int check[] = cbtCheck();
+        int check[] =  cbtcheck;
         int i, j;
-        for(i=0; i<6;i++){
+        for(i=0; i<24;i++){
             j=0;
             if(check[i]==0) {
                 if(i==0) {
@@ -254,16 +237,156 @@ public class MouseActivity extends AppCompatActivity {
                         else j++;
                     }
                 }
-                else {
+                else if(i==5) {
                     while (j<selectlist.size()) {
                         if (selectlist.get(j).getIntweight() > 120)
                             selectlist.remove(j);
                         else j++;
                     }
                 }
+                else if(i==6) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("갤럭시"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==7) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Samsung"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==8) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("LEOPOLD"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==9) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("XENICS"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==10) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("한성컴퓨터"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==11) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("ABKO"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==12) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Apple"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==13) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("ASUS"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==14) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("CHERRY"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==15) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("COX"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==16) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("COSAIR"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==17) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Dell"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==18) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("GIGABYTE"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==19) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("G.skill"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==20) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("HP"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==21) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("LG"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==22) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Logitech"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==23) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("MAXTILL"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==24) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("MSI"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("RAZER"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
             }
         }
-        if(i==6)
+        if(i==25)
             isTrue=true;
     }
 

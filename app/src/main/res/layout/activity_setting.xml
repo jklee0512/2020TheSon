@@ -5,152 +5,206 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:id="@+id/settingContainer"
+    <FrameLayout
+        android:id="@+id/Title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/navigationBar"
-        android:orientation="vertical">
+        android:layout_height="60dp"
+        android:background="@color/main_background">
 
-        <FrameLayout
-            android:id="@+id/Title"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/main_background">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/TitleW"
+            android:layout_height="@dimen/TitleH"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/murucmuruc"
+            android:text="알림설정"
+            android:textSize="40sp" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="@dimen/TitleW"
-                android:layout_height="@dimen/TitleH"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="15dp"
-                android:fontFamily="@font/murucmuruc"
-                android:text="설정"
-                android:textSize="40sp" />
+    </FrameLayout>
 
-        </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Title">
 
         <LinearLayout
             android:id="@+id/settinglist"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Title"
+            android:layout_above="@id/navigationBar"
             android:layout_margin="@dimen/margin_small"
-            android:padding="@dimen/margin_medium"
-            android:background="@drawable/layout_border"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/alramsetting"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/whitecat"
-                android:text="알림설정"
-                android:textSize="40sp" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="@dimen/margin_small">
-
-                <TextView
-                    android:id="@+id/switchT1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/whitecat"
-                    android:text="알림설정"
-                    android:textSize="30sp" />
-
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:layout_margin="@dimen/margin_small" />
-
-            </LinearLayout>
-
-            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/alramkind"
+                <Switch
+                    android:id="@+id/alramOnOff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
                     android:layout_margin="@dimen/margin_small"
-                    android:background="@color/whiteTransparent"
-                    android:fontFamily="@font/whitecat"
-                    android:text="알림종류 설정"
-                    android:textAlignment="textStart"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:id="@+id/nextAct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/margin_large"
-                    android:background="@color/whiteTransparent"
-                    app:srcCompat="@drawable/clickable" />
-            </RelativeLayout>
+                    android:onClick="AlramFunc"
+                    android:text="알림 On/Off"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/murucmuruc"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="@dimen/margin_small">
-
-                <TextView
-                    android:id="@+id/switchT2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/whitecat"
-                    android:text="무음설정"
-                    android:textSize="30sp" />
+                android:orientation="horizontal">
 
                 <Switch
-                    android:id="@+id/switch2"
+                    android:id="@+id/soundOnOff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|center_vertical"
-                    android:layout_margin="@dimen/margin_small" />
+                    android:layout_margin="@dimen/margin_small"
+                    android:fontFamily="@font/murucmuruc"
+                    android:onClick="SoundFunc"
+                    android:text="무음설정"
+                    android:textSize="20sp" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView8"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:fontFamily="@font/whitecat"
-                android:text="문의사항"
-                android:textSize="40sp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:fontFamily="@font/whitecat"
-                android:text="제작자들"
-                android:textSize="40sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:fontFamily="@font/whitecat"
-                android:text="도움말"
-                android:textSize="40sp" />
+                    <TextView
+                        android:id="@+id/correct"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:fontFamily="@font/murucmuruc"
+                        android:text="자세교정 알림"
+                        android:textSize="20sp" />
+
+                    <Switch
+                        android:id="@+id/switchC1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/margin_small"
+                        android:fontFamily="@font/murucmuruc"
+                        android:onClick="CBLDFunc"
+                        android:text="아침,점심,저녁 알림"
+                        android:textSize="20sp" />
+
+                    <Switch
+                        android:id="@+id/switchC2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/margin_small"
+                        android:fontFamily="@font/murucmuruc"
+                        android:onClick="CworkFunc"
+                        android:text="설정시간대별 알림"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/timeChoice1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/whiteTransparent"
+                            android:fontFamily="@font/murucmuruc"
+                            android:onClick="CsetTimeFunc"
+                            android:text="시간대 설정"
+                            android:textAlignment="textStart"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/nextAct1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium"
+                            android:background="@color/whiteTransparent"
+                            app:srcCompat="@drawable/clickable" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/stretching"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/murucmuruc"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:text="스트레칭 알림"
+                        android:textSize="20sp" />
+
+                    <Switch
+                        android:id="@+id/switchS1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/margin_small"
+                        android:fontFamily="@font/murucmuruc"
+                        android:onClick="SBLDFunc"
+                        android:text="아침,점심,저녁 알림"
+                        android:textSize="20sp" />
+
+                    <Switch
+                        android:id="@+id/switchS2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/margin_small"
+                        android:fontFamily="@font/murucmuruc"
+                        android:onClick="SworkFunc"
+                        android:text="설정시간대 알림"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/timeChoice2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/whiteTransparent"
+                            android:fontFamily="@font/murucmuruc"
+                            android:onClick="SsetTimeFunc"
+                            android:text="시간대 설정"
+                            android:textAlignment="textStart"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/nextAct2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium"
+                            android:background="@color/whiteTransparent"
+                            app:srcCompat="@drawable/clickable" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
     <TableLayout
         android:id="@+id/navigationBar"
@@ -204,5 +258,4 @@
                 app:srcCompat="@drawable/ic_setting" />
         </TableRow>
     </TableLayout>
-
 </RelativeLayout>

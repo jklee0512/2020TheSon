@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [com.android.support:design:27.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\63bf817d76404305584768fbeae3132c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\f0c82467e2b7d69302bf6f7727880704\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\137eb4bab4fd2d4373937b9cb97986b5\AndroidManifest.xml:2:1-11:12
@@ -24,20 +24,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\CookAndroid\.gradle\
 MERGED from [android.arch.core:runtime:1.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9ac3506561e047030507d7b33a1d3c12\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\7664b41cc342b66201d4b98f9a5dba77\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\2a4962f5aad2d67fe5d81a67ea32a0ed\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml
 		INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:2:11-69
@@ -70,7 +70,7 @@ ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:13:5-
 	android:name
 		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:13:22-64
 application
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:15:5-44:19
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:15:5-53:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\137eb4bab4fd2d4373937b9cb97986b5\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\137eb4bab4fd2d4373937b9cb97986b5\AndroidManifest.xml:9:5-20
 MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\CookAndroid\.gradle\caches\transforms-1\files-1.1\extensions-1.1.1.aar\b03f8bb8f976dd125f6e950854ad46fc\AndroidManifest.xml:22:5-28:19
@@ -89,68 +89,84 @@ MERGED from [com.android.volley:volley:1.1.0] C:\CookAndroid\.gradle\caches\tran
 		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
 		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:21:9-45
+service#com.cookandroid.the_son.AlramService
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:23:9-27:19
+	android:enabled
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:24:13-35
+	android:exported
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:23:18-46
 activity#com.cookandroid.the_son.Activity_Loading
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:22:9-28:20
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:29:9-35:20
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:22:19-51
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:29:19-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:33:27-74
 activity#com.cookandroid.the_son.GridActivity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:29:9-50
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:36:9-50
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:36:19-47
 activity#com.cookandroid.the_son.Camera1Activity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:30:9-53
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:37:9-53
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:30:19-50
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:37:19-50
 activity#com.cookandroid.the_son.Camera2Activity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:31:9-53
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:38:9-53
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:31:19-50
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:38:19-50
 activity#com.cookandroid.the_son.AnalyzeLoading
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:32:9-52
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:39:9-52
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:32:19-49
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:39:19-49
 activity#com.cookandroid.the_son.AnalyzeActivity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:33:9-53
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:40:9-53
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:33:19-50
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:40:19-50
 activity#com.cookandroid.the_son.HealthActivity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:34:9-52
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:41:9-52
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:34:19-49
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:41:19-49
 activity#com.cookandroid.the_son.MouseActivity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:35:9-51
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:42:9-51
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:35:19-48
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:42:19-48
+activity#com.cookandroid.the_son.mousetag
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:43:9-45
+	android:name
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:43:19-43
 activity#com.cookandroid.the_son.SettingActivity
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:36:9-53
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:44:9-53
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:36:19-50
-activity#com.cookandroid.the_son.Setting_alram
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:37:9-51
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:44:19-50
+activity#com.cookandroid.the_son.Setting_alram1
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:45:9-52
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:37:19-48
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:45:19-49
+activity#com.cookandroid.the_son.Setting_alram2
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:46:9-52
+	android:name
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:46:19-49
 activity#com.cookandroid.the_son.PopHand
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:38:9-40:51
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:47:9-49:51
 	android:theme
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:40:13-48
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:49:13-48
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:39:13-36
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:48:13-36
 activity#com.cookandroid.the_son.PopMouse
-ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:41:9-43:52
+ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:50:9-52:52
 	android:theme
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:43:13-49
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:52:13-49
 	android:name
-		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml:51:13-37
 uses-sdk
 INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\CookAndroid\Project\The_Son\app\src\main\AndroidManifest.xml

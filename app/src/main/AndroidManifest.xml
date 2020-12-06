@@ -19,6 +19,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MaterialTheme">
+
+        <service android:name=".AlramService"
+            android:enabled="true"
+            android:exported="true" >
+
+        </service>
+        
         <activity android:name=".Activity_Loading">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,8 +40,10 @@
         <activity android:name=".AnalyzeActivity" />
         <activity android:name=".HealthActivity" />
         <activity android:name=".MouseActivity" />
+        <activity android:name=".mousetag"/>
         <activity android:name=".SettingActivity" />
-        <activity android:name=".Setting_alram" />
+        <activity android:name=".Setting_alram1" />
+        <activity android:name=".Setting_alram2" />
         <activity
             android:name=".PopHand"
             android:theme="@style/AppTheme.Pop" />
@@ -42,5 +51,6 @@
             android:name=".PopMouse"
             android:theme="@style/AppTheme.Grid" />
     </application>
+    
 
 </manifest>

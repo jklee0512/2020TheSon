@@ -20,6 +20,10 @@
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\layout_setting_alram1.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\layout\\setting_alram1.xml"
+    },
+    {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable_msg3.jpg.flat",
         "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\drawable\\msg3.jpg"
     },
@@ -796,6 +800,10 @@
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\9f6dd60c69da54408ae202a74c6c532b\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mousetag.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\layout\\activity_mousetag.xml"
+    },
+    {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
@@ -890,10 +898,6 @@
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\layout_setting_alram.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\layout\\setting_alram.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
@@ -1092,6 +1096,10 @@
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\layout_setting_alram2.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\layout\\setting_alram2.xml"
+    },
+    {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
@@ -1110,6 +1118,10 @@
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable_list_spinner.png.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\drawable\\list_spinner.png"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",

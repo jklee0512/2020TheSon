@@ -25,7 +25,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/MaterialTheme" >
+        <service
+            android:name="com.cookandroid.the_son.AlramService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
         <activity android:name="com.cookandroid.the_son.Activity_Loading" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +47,10 @@
         <activity android:name="com.cookandroid.the_son.AnalyzeActivity" />
         <activity android:name="com.cookandroid.the_son.HealthActivity" />
         <activity android:name="com.cookandroid.the_son.MouseActivity" />
+        <activity android:name="com.cookandroid.the_son.mousetag" />
         <activity android:name="com.cookandroid.the_son.SettingActivity" />
-        <activity android:name="com.cookandroid.the_son.Setting_alram" />
+        <activity android:name="com.cookandroid.the_son.Setting_alram1" />
+        <activity android:name="com.cookandroid.the_son.Setting_alram2" />
         <activity
             android:name="com.cookandroid.the_son.PopHand"
             android:theme="@style/AppTheme.Pop" />
