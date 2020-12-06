@@ -57,14 +57,12 @@ public class AlramService extends Service {
     @Override
     public void onDestroy() {
         Log.d(TAG, "onDestroy: ");
-
         // stopService 에 의해 호출 됨
         // 스레드를 정지시킴
         if (mThread != null) {
             mThread.interrupt();
             mThread = null;
         }
-
         super.onDestroy();
     }
 
@@ -95,18 +93,13 @@ public class AlramService extends Service {
         return super.onUnbind(intent);
     }
 
-    // 바인드된 컴포넌트에 카운팅 변수 값을 제공
-    public int getCount() {
-        return mCount;
-    }
-
     private void startForegroundService() {
         // default 채널 ID로 알림 생성
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "default");
         builder.setSmallIcon(R.mipmap.ic_launcher);
         builder.setContentTitle("포그라운드 서비스");
         builder.setContentText("포그라운드 서비스 실행 중");
-        Intent notificationIntent = new Intent(this, SettingActivity.class);
+        Intent notificationIntent = new Intent(this, Activity_Loading.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
         builder.setContentIntent(pendingIntent);
 

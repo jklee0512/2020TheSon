@@ -22,7 +22,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="15dp"
             android:fontFamily="@font/murucmuruc"
-            android:text="유사도 분석"
+            android:text="손목 분석 결과"
             android:textSize="40sp" />
 
     </FrameLayout>
@@ -38,12 +38,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="분석 결과 : "
+            android:text="정면 : "
             android:textSize="30dp"
             android:fontFamily="@font/whitecat"/>
 
         <TextView
-            android:id="@+id/score"
+            android:id="@+id/fscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="data"
@@ -79,6 +79,29 @@
                         android:src="#66aa66" />
                 </LinearLayout>
             </HorizontalScrollView>
+            <LinearLayout
+                android:id="@+id/dataview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Title"
+                android:orientation="horizontal"
+                android:background="@color/colorPink">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="측면 : "
+                    android:textSize="30dp"
+                    android:fontFamily="@font/whitecat"/>
+
+                <TextView
+                    android:id="@+id/sscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="data"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/whitecat" />
+            </LinearLayout>
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

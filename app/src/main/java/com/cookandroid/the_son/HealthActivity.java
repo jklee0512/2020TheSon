@@ -24,6 +24,12 @@ public class HealthActivity extends AppCompatActivity {
         Button btnmassage = findViewById(R.id.button2);
         Button btnpalm = findViewById(R.id.button3);
 
+        Fragment inifragment= new Fragment_diagnosis();
+        FragmentManager inifragmentManager = getSupportFragmentManager();
+        FragmentTransaction initransaction = inifragmentManager.beginTransaction();
+        initransaction.replace(R.id.container_scroll, inifragment);
+        initransaction.commit();
+
         btnfinger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -12,7 +12,7 @@ public class mousetag extends AppCompatActivity {
 
     private Button okbtn;
     private CheckBox Galaxy, Leopold, Samsung, Zenix, Hansung, Abko;
-    private CheckBox Apple, Asus, Cherry, Cox, Cosair, Dell;
+    private CheckBox Apple, Asus, Cherry, Cox, Cosair, Dell, Hacker;
     private CheckBox GIgabyte, Gskill, Hp, Lg, Logitech, Maxtill, Msi, Razer;
     private CheckBox wire1Btn, wire2Btn, wire3Btn, weight1Btn, weight2Btn, weight3Btn;
 
@@ -42,6 +42,7 @@ public class mousetag extends AppCompatActivity {
         Maxtill = findViewById(R.id.maxtill);
         Msi = findViewById(R.id.msi);
         Razer = findViewById(R.id.razer);
+        Hacker = findViewById(R.id.hacker);
         wire1Btn = findViewById(R.id.wire1);
         wire2Btn = findViewById(R.id.wire2);
         wire3Btn = findViewById(R.id.wire3);
@@ -60,7 +61,7 @@ public class mousetag extends AppCompatActivity {
         });
     }
     public int[] cbtCheck(){
-        int arr[] = new int[26];
+        int arr[] = new int[27];
         if(wire1Btn.isChecked()) arr[0] = 1;
         if(wire2Btn.isChecked()) arr[1] = 1;
         if(wire3Btn.isChecked()) arr[2] = 1;
@@ -87,6 +88,7 @@ public class mousetag extends AppCompatActivity {
         if(Maxtill.isChecked()) arr[23]=1;
         if(Msi.isChecked()) arr[24]=1;
         if(Razer.isChecked()) arr[25]=1;
+        if(Hacker.isChecked()) arr[26]=1;
 
         return arr;
     }

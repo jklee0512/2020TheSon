@@ -420,6 +420,10 @@
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circularbutton.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\drawable\\circularbutton.xml"
+    },
+    {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
@@ -650,6 +654,10 @@
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable_diagnose.png.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\drawable\\diagnose.png"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility.xml.flat",
@@ -1454,6 +1462,10 @@
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "C:\\CookAndroid\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\f0c82467e2b7d69302bf6f7727880704\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\layout_health_diagnosis.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\The_Son\\app\\src\\main\\res\\layout\\health_diagnosis.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\The_Son\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",

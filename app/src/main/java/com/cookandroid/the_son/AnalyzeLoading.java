@@ -180,16 +180,16 @@ public class AnalyzeLoading extends AppCompatActivity {
                             ((lenImg[2] & 0xFF));
                     Log.w("len", String.valueOf(len));
                     byte[] imgData = new byte[len];
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                     img = dis.read(imgData);
                     fos.write(imgData, 0, img);
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                     dis.read(lenImg);
                     len=    ((lenImg[0] & 0xFF) << 16) |
                             ((lenImg[1] & 0xFF) << 8) |
                             ((lenImg[2] & 0xFF));
                     imgData = new byte[len];
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                     img = dis.read(imgData);
                     fos2.write(imgData, 0, img);
                 } catch (IOException e) {
@@ -241,14 +241,15 @@ public class AnalyzeLoading extends AppCompatActivity {
                 case 8:text.setText(t9); count++; break;
                 case 9:text.setText(t10); count=0; break;
             }
-            if(isTrue == true){
+            if(isTrue){
                 handler.removeCallbacks(runnable);
                 float score = (result[0] + result[1]) / 2;
                 Log.w("Score", String.valueOf(score));
-                dataresult = Float.valueOf(score).toString();
+                //dataresult = Float.valueOf(score).toString();
 
                 Intent intent = new Intent(AnalyzeLoading.this, AnalyzeActivity.class);
-                intent.putExtra("score",dataresult);
+                intent.putExtra("frontscore",Float.valueOf(result[0]).toString());
+                intent.putExtra("sidescore",Float.valueOf(result[1]).toString());
                 startActivity(intent);
             }
             else {

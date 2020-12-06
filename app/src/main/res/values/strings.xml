@@ -33,8 +33,10 @@
     <string name="palm2"> ① 손을 앞으로 쭊 뻗어 손바닥이 정면을 향하게 한다.</string>
     <string name="palm3"> ② 손목을 꺽어 다른 손으로 손끝을 잡아 몸 쪽으로 당긴다.</string>
     <string name="palm4"> ③ 양 손을 바꿔가며 2~3회 뒤풀이한다.</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="diagnose"> 진단법: 손목 관절을 일정시간(60초) 굽히고 있도록 하는 팔렌검사를 하여 정중신경 분포 부위에 뻐근함과 무감각이 나타나면 손목터널증후군으로 본다. </string>
+    <string name="diagnose_1"> 손가락 운동: 기본적인 운동이다 </string>
+    <string name="diagnose_2"> 혈자리 마사지: 손목터널증후군 치료에 쓰이는 혈자리를 평소에 적절히 마사지함으로써 치료 효과를 높인다. 다만 과도한 자극은 증상을 악화시킬 수 있으므로 의료진에게 상담받은 후 실행하도록 하자.</string>
+    <string name="diagnose_3"> 손바닥 운동: 손가락 및 손목, 팔꿈치 굴곡근을 늘려 근육의 피로를 풀어주어 혈액순환에 도움을 준다.</string>
+    <string name="diagnose_4"> 간단한 운동으로 손목터널증후군을 완화시키자</string>
 
 </resources>

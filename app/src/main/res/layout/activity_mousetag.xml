@@ -253,6 +253,12 @@
                 android:layout_height="wrap_content"
                 android:text="RAZER" />
 
+            <CheckBox
+                android:id="@+id/hacker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hacker" />
+
         </TableRow>
 
         <TableRow

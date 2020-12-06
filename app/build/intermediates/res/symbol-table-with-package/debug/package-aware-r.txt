@@ -788,6 +788,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable back
 drawable circlebutton
+drawable circularbutton
 drawable clickable
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -795,6 +796,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable diagnose
 drawable finger1
 drawable finger2
 drawable finger3
@@ -916,6 +918,7 @@ id cox
 id custom
 id customPanel
 id dataview
+id dataview2
 id decor_content_parent
 id default_activity_button
 id dell
@@ -951,10 +954,12 @@ id finderbtn
 id findmouse_list
 id fixed
 id forever
+id fscore
 id galaxy
 id ghost_view
 id gigabyte
 id gskill
+id hacker
 id handhelp
 id handmeasure
 id handtable
@@ -1060,7 +1065,6 @@ id samsung
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
-id score
 id screen
 id scroll
 id scrollIndicatorDown
@@ -1098,6 +1102,7 @@ id spread_inside
 id src_atop
 id src_in
 id src_over
+id sscore
 id start
 id startTime
 id status_bar_latest_event_content
@@ -1108,6 +1113,7 @@ id switchC1
 id switchC2
 id switchS1
 id switchS2
+id t
 id t1
 id t2
 id t3
@@ -1236,6 +1242,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout health_diagnosis
 layout health_finger
 layout health_massage
 layout health_palm
@@ -1304,6 +1311,11 @@ string camera1_name
 string camera2_name
 string camera_error
 string character_counter_pattern
+string diagnose
+string diagnose_1
+string diagnose_2
+string diagnose_3
+string diagnose_4
 string health1
 string health2
 string health3
@@ -1311,7 +1323,6 @@ string health4
 string health5
 string health6
 string health_info
-string hello_blank_fragment
 string mheight
 string mname
 string mouse_input

@@ -39,6 +39,8 @@ public class SettingActivity extends AppCompatActivity {
         finderBtn = findViewById(R.id.finderbtn);
         settingBtn = findViewById(R.id.settingbtn);
 
+        switchState();
+
         imgbuttonListener = new ImageButton.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +71,35 @@ public class SettingActivity extends AppCompatActivity {
         finderBtn.setOnClickListener(imgbuttonListener);
         settingBtn.setOnClickListener(imgbuttonListener);
     }
+
+    //스위치 상태 불러오기
+    public void switchState(){
+        if(Activity_Loading.alram.getAlramOnOff()==1)
+            alramonoff.setChecked(true);
+        else
+            alramonoff.setChecked(false);
+        if(Activity_Loading.alram.getSoundOnOff()==1)
+            alramonoff.setChecked(true);
+        else
+            alramonoff.setChecked(false);
+        if(Activity_Loading.alram.getBLDcorrect()==1)
+            alramonoff.setChecked(true);
+        else
+            alramonoff.setChecked(false);
+        if(Activity_Loading.alram.getBLDstretching()==1)
+            alramonoff.setChecked(true);
+        else
+            alramonoff.setChecked(false);
+        if(Activity_Loading.alram.getWorkcorrect()==1)
+            alramonoff.setChecked(true);
+        else
+            alramonoff.setChecked(false);
+        if(Activity_Loading.alram.getWorkstretching()==1)
+            alramonoff.setChecked(true);
+        else
+            alramonoff.setChecked(false);
+    }
+
     //알람 설정 스위치 전역변수로 알람 키기랑 알람 끄기
     // 가장 기초적인 조건
     public void AlramFunc(View view) {
@@ -85,7 +116,6 @@ public class SettingActivity extends AppCompatActivity {
         }
         else {
             alram.setAlramOnOff(0);
-
             Intent intent = new Intent(SettingActivity.this, AlramService.class);
             intent.setAction("stopForeground");
             if(Build.VERSION.SDK_INT> Build.VERSION_CODES.O) {
@@ -93,7 +123,6 @@ public class SettingActivity extends AppCompatActivity {
             } else {
                 stopService(intent);
             }
-
         }
     }
     //알람이 올때 소리를 낼지 안낼지

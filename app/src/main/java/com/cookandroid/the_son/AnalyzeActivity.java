@@ -58,10 +58,15 @@ public class AnalyzeActivity extends AppCompatActivity {
         settingBtn = findViewById(R.id.settingbtn);
 
         Intent intent=getIntent();
-        String score=intent.getExtras().getString("score");
-        score += "%";
-        TextView getScore=findViewById(R.id.score);
-        getScore.setText(score);
+        String fscore=intent.getExtras().getString("frontscore");
+        fscore += "°";
+        TextView getfScore=findViewById(R.id.fscore);
+        getfScore.setText(fscore);
+
+        String sscore=intent.getExtras().getString("sidescore");
+        sscore += "°";
+        TextView getsScore=findViewById(R.id.sscore);
+        getsScore.setText(sscore);
 
         imgbuttonListener = new ImageButton.OnClickListener() {
             @Override

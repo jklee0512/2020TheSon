@@ -119,13 +119,9 @@ public class MouseActivity extends AppCompatActivity {
                 (new Thread() {
                     public void run() {
                         adapter.clear();
+                        selectlist.clear();
                         selectlist.addAll(mylist);
-                        isTrue=false;
-                        try {
-                            checkUpdate();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+                        isTrue=true;
                     }
                 }).start();
                 handler.post(runnable);
@@ -183,6 +179,7 @@ public class MouseActivity extends AppCompatActivity {
             (new Thread() {
                 public void run() {
                     adapter.clear();
+                    selectlist.clear();
                     selectlist.addAll(mylist);
                     isTrue=false;
                     try {
@@ -199,7 +196,7 @@ public class MouseActivity extends AppCompatActivity {
     public void checkUpdate(){
         int check[] =  cbtcheck;
         int i, j;
-        for(i=0; i<24;i++){
+        for(i=0; i<27;i++){
             j=0;
             if(check[i]==0) {
                 if(i==0) {
@@ -244,149 +241,156 @@ public class MouseActivity extends AppCompatActivity {
                         else j++;
                     }
                 }
-//                else if(i==6) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("갤럭시"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==7) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("Samsung"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==8) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("LEOPOLD"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==9) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("XENICS"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==10) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("한성컴퓨터"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==11) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("ABKO"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==12) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("Apple"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==13) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("ASUS"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==14) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("CHERRY"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==15) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("COX"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==16) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("COSAIR"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==17) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("Dell"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==18) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("GIGABYTE"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==19) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("G.skill"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==20) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("HP"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==21) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("LG"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==22) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("Logitech"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==23) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("MAXTILL"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else if(i==24) {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("MSI"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
-//                else {
-//                    while (j<selectlist.size()) {
-//                        if (selectlist.get(j).getName().contains("RAZER"))
-//                            selectlist.remove(j);
-//                        else j++;
-//                    }
-//                }
+                else if(i==6) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("갤럭시"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
                 }
-           }
-        if(i==6)
+                else if(i==7) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("LEOPOLD"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==8) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Samsung"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==9) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("XENICS"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==10) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("한성컴퓨터"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==11) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("ABKO"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==12) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Apple"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==13) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("ASUS"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==14) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("CHERRY"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==15) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("COX"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==16) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("CORSAIR"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==17) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Dell"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==18) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("GIGABYTE"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==19) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("G.Skill"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==20) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("HP"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==21) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("LG"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==22) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("Logitech"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==23) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("MAXTILL"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==24) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("MSI"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else if(i==25) {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("RAZER"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+                else {
+                    while (j<selectlist.size()) {
+                        if (selectlist.get(j).getName().contains("HACKER"))
+                            selectlist.remove(j);
+                        else j++;
+                    }
+                }
+            }
+        }
+        if(i==27)
             isTrue=true;
     }
 
