@@ -16,7 +16,7 @@ public class AlramService extends Service {
 
     private Thread mThread;
     private int mCount = 0;
-
+    static public Alram alram;
     public AlramService() {
     }
 

@@ -25,8 +25,8 @@ public class Setting_alram2 extends AppCompatActivity {
             else
                 startT = String.format(Locale.getDefault(), "AM %02d:%02d",hourOfDay, minute);
             t1.setText(startT);
-            Activity_Loading.alram.setStartHourS(hourOfDay);
-            Activity_Loading.alram.setStartMinS(minute);
+            alram.setStartHourS(hourOfDay);
+            alram.setStartMinS(minute);
         }
     };
     private TimePickerDialog.OnTimeSetListener EtimeSetListenr = new TimePickerDialog.OnTimeSetListener() {

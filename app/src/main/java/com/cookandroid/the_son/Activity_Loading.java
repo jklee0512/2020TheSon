@@ -7,13 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 
 public class Activity_Loading extends AppCompatActivity {
 
-    static public Alram alram;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
 
-        alram = new Alram();
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override

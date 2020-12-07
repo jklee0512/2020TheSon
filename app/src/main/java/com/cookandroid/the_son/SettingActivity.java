@@ -16,7 +16,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Switch;
 
-import static com.cookandroid.the_son.Activity_Loading.alram;
 
 public class SettingActivity extends AppCompatActivity {
     private Switch alramonoff, soundonoff, C1, C2, S1, S2;
