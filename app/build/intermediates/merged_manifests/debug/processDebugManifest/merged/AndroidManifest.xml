@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="26"
         android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -31,8 +31,7 @@
         <service
             android:name="com.cookandroid.the_son.AlramService"
             android:enabled="true"
-            android:exported="true" >
-        </service>
+            android:exported="true" />
 
         <activity android:name="com.cookandroid.the_son.Activity_Loading" >
             <intent-filter>
@@ -58,6 +57,11 @@
         <activity
             android:name="com.cookandroid.the_son.PopMouse"
             android:theme="@style/AppTheme.Grid" />
+
+        <receiver
+            android:name="com.cookandroid.the_son.AlramReceiver"
+            android:enabled="true"
+            android:exported="true" />
 
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"

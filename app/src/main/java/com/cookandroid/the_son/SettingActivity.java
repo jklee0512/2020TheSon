@@ -3,8 +3,12 @@ package com.cookandroid.the_son;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.IBinder;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,7 +43,8 @@ public class SettingActivity extends AppCompatActivity {
         finderBtn = findViewById(R.id.finderbtn);
         settingBtn = findViewById(R.id.settingbtn);
 
-        switchState();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        switchState(pref);
 
         imgbuttonListener = new ImageButton.OnClickListener() {
             @Override
@@ -72,29 +77,51 @@ public class SettingActivity extends AppCompatActivity {
         settingBtn.setOnClickListener(imgbuttonListener);
     }
 
+    public void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        switchState(sharedPreferences);
+    }
+
     //스위치 상태 불러오기
-    public void switchState(){
-        if(Activity_Loading.alram.getAlramOnOff()==1)
+    public void switchState(SharedPreferences pref){
+
+        alram.setAlramOnOff(pref.getInt("alramonoff",0));
+        alram.setSoundOnOff(pref.getInt("soundonoff",0));
+        alram.setBLDcorrect(pref.getInt("BLDC",0));
+        alram.setWorkcorrect(pref.getInt("workC",0));
+        alram.setBLDstretching(pref.getInt("BLDS",0));
+        alram.setWorkstretching(pref.getInt("workS",0));
+        alram.setStartHourC(pref.getInt("SHourC",9));
+        alram.setStartMinC(pref.getInt("SMinC",0));
+        alram.setEndHourC(pref.getInt("EHourC",18));
+        alram.setEndMinC(pref.getInt("EMinC",0));
+        alram.setStartHourS(pref.getInt("SHourS",9));
+        alram.setStartMinS(pref.getInt("SMinS",0));
+        alram.setEndHourS(pref.getInt("EHourS",18));
+        alram.setEndMinS(pref.getInt("EMinS",0));
+
+        if(alram.getAlramOnOff()==1)
             alramonoff.setChecked(true);
         else
             alramonoff.setChecked(false);
-        if(Activity_Loading.alram.getSoundOnOff()==1)
+        if(alram.getSoundOnOff()==1)
             alramonoff.setChecked(true);
         else
             alramonoff.setChecked(false);
-        if(Activity_Loading.alram.getBLDcorrect()==1)
+        if(alram.getBLDcorrect()==1)
             alramonoff.setChecked(true);
         else
             alramonoff.setChecked(false);
-        if(Activity_Loading.alram.getBLDstretching()==1)
+        if(alram.getBLDstretching()==1)
             alramonoff.setChecked(true);
         else
             alramonoff.setChecked(false);
-        if(Activity_Loading.alram.getWorkcorrect()==1)
+        if(alram.getWorkcorrect()==1)
             alramonoff.setChecked(true);
         else
             alramonoff.setChecked(false);
-        if(Activity_Loading.alram.getWorkstretching()==1)
+        if(alram.getWorkstretching()==1)
             alramonoff.setChecked(true);
         else
             alramonoff.setChecked(false);
@@ -105,7 +132,11 @@ public class SettingActivity extends AppCompatActivity {
     public void AlramFunc(View view) {
         if(alramonoff.isChecked()) {
             alram.setAlramOnOff(1);
-            Log.d("My Service", "서비스 동작중!");
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("alramononff",1);
+            edit.apply();
+
             Intent intent = new Intent(SettingActivity.this, AlramService.class);
             intent.setAction("startForeground");
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
@@ -116,6 +147,11 @@ public class SettingActivity extends AppCompatActivity {
         }
         else {
             alram.setAlramOnOff(0);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("alramononff",0);
+            edit.apply();
+
             Intent intent = new Intent(SettingActivity.this, AlramService.class);
             intent.setAction("stopForeground");
             if(Build.VERSION.SDK_INT> Build.VERSION_CODES.O) {
@@ -129,24 +165,52 @@ public class SettingActivity extends AppCompatActivity {
     public void SoundFunc(View view) {
         if(soundonoff.isChecked()) {
             alram.setSoundOnOff(1);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("soundonoff",1);
+            edit.apply();
         }
         else {
             alram.setSoundOnOff(0);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("soundononff",0);
+            edit.apply();
         }
     }
     //자세교정 아침,점심,저녁
     public void CBLDFunc(View view) {
-        if(C1.isChecked())
+        if(C1.isChecked()) {
             alram.setBLDcorrect(1);
-        else
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("BLDC", 1);
+            edit.apply();
+        }
+        else {
             alram.setBLDcorrect(0);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("BLDC",0);
+            edit.apply();
+        }
     }
     //자세교정 설정시간대
     public void CworkFunc(View view) {
-        if(C2.isChecked())
+        if(C2.isChecked()) {
             alram.setWorkcorrect(1);
-        else
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("workC",1);
+            edit.apply();
+        }
+        else {
             alram.setWorkcorrect(0);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("workC",0);
+            edit.apply();
+        }
     }
     //자세교정 시간대 설정
     public void CsetTimeFunc(View view) {
@@ -155,17 +219,37 @@ public class SettingActivity extends AppCompatActivity {
     }
     //스트레칭 아침,점심,저녁
     public void SBLDFunc(View view) {
-        if(S1.isChecked())
+        if(S1.isChecked()) {
             alram.setBLDstretching(1);
-        else
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("BLDS",1);
+            edit.apply();
+        }
+        else {
             alram.setBLDstretching(0);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("BLDS",0);
+            edit.apply();
+        }
     }
     //스트레칭 설정시간대
     public void SworkFunc(View view) {
-        if(S2.isChecked())
+        if(S2.isChecked()) {
             alram.setWorkstretching(1);
-        else
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("workS",1);
+            edit.apply();
+        }
+        else {
             alram.setWorkstretching(0);
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putInt("workS",0);
+            edit.apply();
+        }
     }
     //스트레칭 시간대 설정
     public void SsetTimeFunc(View view) {

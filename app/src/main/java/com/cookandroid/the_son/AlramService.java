@@ -29,28 +29,28 @@ public class AlramService extends Service {
         else if ("stopForeground".equals(intent.getAction())){
              stopForeground(true);
         }
-        else if (mThread == null) {
-            // 스레드 초기화 및 시작
-            mThread = new Thread("My Thread") {
-                @Override
-                public void run() {
-                    for (int i = 0; i < 100; i++) {
-                        try {
-                            mCount++;
-                            // 1초 마다 쉬기
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            // 스레드에 인터럽트가 걸리면
-                            // 오래 걸리는 처리 종료
-                            break;
-                        }
-                        // 1초 마다 로그 남기기
-                        Log.d("My Service", "서비스 동작 중 " + mCount);
-                    }
-                }
-            };
-            mThread.start();
-        }
+//        else if (mThread == null) {
+//            // 스레드 초기화 및 시작
+//            mThread = new Thread("My Thread") {
+//                @Override
+//                public void run() {
+//                    for (int i = 0; i < 100; i++) {
+//                        try {
+//                            mCount++;
+//                            // 1초 마다 쉬기
+//                            Thread.sleep(1000);
+//                        } catch (InterruptedException e) {
+//                            // 스레드에 인터럽트가 걸리면
+//                            // 오래 걸리는 처리 종료
+//                            break;
+//                        }
+//                        // 1초 마다 로그 남기기
+//                        Log.d("My Service", "서비스 동작 중 " + mCount);
+//                    }
+//                }
+//            };
+//            mThread.start();
+//        }
         return START_NOT_STICKY;
     }
 
